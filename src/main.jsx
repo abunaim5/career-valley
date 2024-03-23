@@ -7,23 +7,29 @@ import {
 import './index.css'
 import Root from './Root/Root';
 import Home from './Home/Home';
-
+import ErrorPage from './ErrorPage/ErrorPage';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: '/',
+        index: true,
         element: <Home></Home>,
-        loader: () => fetch('../public/categories.json')
-      }
+        loader: async () => {
+          const [categoriesRes, jobsRes] = await Promise.all([fetch('../public/categories.json'), fetch('../public/jobs.json')])
+          const categories = await categoriesRes.json();
+          const jobs = await jobsRes.json();
+          return { categories, jobs }
+        }
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

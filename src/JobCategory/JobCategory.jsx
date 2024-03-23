@@ -2,7 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import CategoryCard from "../CategoryCard/CategoryCard";
 
 const JobCategory = () => {
-    const categories = useLoaderData();
+    const {categories} = useLoaderData();
+    
     console.log(categories)
 
     return (
