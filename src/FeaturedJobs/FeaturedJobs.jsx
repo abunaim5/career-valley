@@ -23,6 +23,9 @@ const FeaturedJobs = () => {
                 </div>
                 <button className="btn w-auto h-auto py-3 px-5 text-xl rounded-lg font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white mt-6">View Details</button>
             </div>
+            <div className="text-center mt-10">
+                <button className="btn w-auto h-auto py-5 px-7 text-xl rounded-lg font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">See All Jobs</button>
+            </div>
         </div>
     );
 };

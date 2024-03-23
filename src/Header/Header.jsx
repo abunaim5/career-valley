@@ -1,6 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import Banner from "../Banner/Banner";
-
 const Header = () => {
 
     const links = <>
@@ -11,7 +9,7 @@ const Header = () => {
     </>
 
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 pt-14">
             <nav className="navbar px-0 max-w-[82.5rem] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
