@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
+import bgRec from '../assets/images/bg2.png'
+
 const Header = () => {
 
     const links = <>
@@ -9,7 +11,10 @@ const Header = () => {
     </>
 
     return (
-        <div className="bg-gray-100 pt-14">
+        <div className="bg-gray-100 pt-14 relative">
+            <div className="absolute top-0 right-0 z-10">
+                <img src={bgRec} alt="" />
+            </div>
             <nav className="navbar px-0 max-w-[82.5rem] mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">

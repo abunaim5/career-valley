@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import FeaturedJobCard from "../FeaturedJobCard/FeaturedJobCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const FeaturedJobs = () => {
     const { jobs } = useLoaderData();
@@ -9,11 +9,6 @@ const FeaturedJobs = () => {
     const handleSeeAll = () => {
         setSeeAll(true);
     }
-
-    // useEffect(() => {
-    //     setSeeAll(true);
-    // }, [])
-    console.log(jobs.length)
 
     return (
         <div className="max-w-[82.5rem] mx-auto mt-32">
