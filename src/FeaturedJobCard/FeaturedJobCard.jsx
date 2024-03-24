@@ -3,8 +3,8 @@ import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 
-const FeaturedJobCard = ({job}) => {
-    const {logo, job_title, company_name, remote_or_onsite, job_type, location, salary_range} = job;
+const FeaturedJobCard = ({ job }) => {
+    const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary_range } = job;
 
     return (
         <div className="border border-[#E8E8E8] p-10 rounded-lg">
@@ -23,7 +23,7 @@ const FeaturedJobCard = ({job}) => {
                 <p className="flex items-center gap-2 text-xl font-semibold text-[#757575]"><span className="text-2xl"><SlLocationPin /></span> <span>{location}</span></p>
                 <p className="flex items-center gap-2 text-xl font-semibold text-[#757575]"><span className="text-2xl"><HiOutlineCurrencyDollar /></span> <span>{salary_range}</span></p>
             </div>
-            <Link to='/details'><button className="btn w-auto h-auto py-3 px-5 text-xl rounded-lg font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white mt-6">View Details</button></Link>
+            <Link to={`/details/${id}`}><button className="btn w-auto h-auto py-3 px-5 text-xl rounded-lg font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white mt-6">View Details</button></Link>
         </div>
     );
 };

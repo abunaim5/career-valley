@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const FeaturedJobs = () => {
     const { jobs } = useLoaderData();
+    console.log(jobs);
     const [seeAll, setSeeAll] = useState(false);
 
     const handleSeeAll = () => {
